@@ -65,12 +65,8 @@ WyrdLang is a hobby project created for fun and experimentation. It demonstrates
 
 ## Status
 
-This is a hobby project and is not intended for production use. It exists purely for educational purposes, creative expression, and the joy of reimagining how we talk to computers.
+This is a hobby project and is not intended for production use. It exists purely for educational purposes, creative expression, and the joy of re-imagining how we talk to computers.
 
 ## Contributing
 
 Feel free to suggest additional keyword replacements or improvements to make WyrdLang even more mystical and enchanting!
-
----
-
-*"In WyrdLang, we don't write code—we weave spells."*
