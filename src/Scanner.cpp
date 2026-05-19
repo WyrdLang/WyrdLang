@@ -51,7 +51,11 @@ void Scanner::scanToken(){
     case ' ':
     case '\r':
     case '\t':
-    break;
+        break;
+
+    case '\n':
+        line++;
+        break;
 
     case '"': string(); break;
 
@@ -68,8 +72,6 @@ void Scanner::scanToken(){
     break;
     }
 }
-
-
 
 // Overloaded Function addToken
 void Scanner::addToken(TokenType _type){
