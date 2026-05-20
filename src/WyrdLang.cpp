@@ -4,6 +4,7 @@
 #include "Scanner.h"
 #include <iostream>
 #include <fstream>
+#include <sstream>
 
 bool WyrdLang::hadError = false;
 
@@ -28,9 +29,18 @@ void WyrdLang::runFile(std::string filePath){
     std::ifstream inputFile(filePath);
     std::string fileData;
 
-    while(getline(inputFile,fileData)){}
-    std::cout << "File Loaded Successfully" << std::endl;
-    std::cout << "FILE DATE: " << fileData << std::endl;
+    if (!inputFile.is_open()) {
+        std::cerr << "Error: Could not open file " << filePath << std::endl;
+        exit(EX_NOINPUT);
+    }
+
+    std::stringstream buffer;
+    buffer << inputFile.rdbuf();
+    
+    fileData = buffer.str();
+
+    std::cout << "File Loaded Successfully\n" << std::endl;
+
     run(fileData);
     
     if(hadError){

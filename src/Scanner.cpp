@@ -53,6 +53,10 @@ void Scanner::scanToken(){
     case '\t':
     break;
 
+    case '\n':
+        advance();
+    break;
+
     case '"': string(); break;
 
     default:
